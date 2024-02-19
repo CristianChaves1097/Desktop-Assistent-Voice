@@ -48,9 +48,7 @@ def assistant(command):
     elif "tell me the time" in command or "what time it is" in command:
         current_time = datetime.datetime.now().strftime("%H:%M:%S")
         speak(f"The current time is {current_time}")
-    # elif "open" in command:
-    #     prog = command.replace("open", "").strip()
-    #     os.system(prog)
+    
     elif "exit" in command or "quit" in command:
         speak("Goodbye!")
         exit()
@@ -58,9 +56,7 @@ def assistant(command):
         speak(f"I'm sorry, I don't understand that command.")
 
 if __name__ == "__main__":
-    window = tk.Tk()
-    greeting = tk.Label(text="Hello! How can I assist you today?")
-    greeting.pack()
+
     speak("Hello! How can I assist you today?")
     
     while True:
